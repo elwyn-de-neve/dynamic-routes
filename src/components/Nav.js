@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import routes from '../routes/routes.json'
+import { routes } from "../routes/routes";
 
 function Nav() {
     const navLink = ( { isActive } ) => isActive
@@ -12,7 +12,7 @@ function Nav() {
             <ul>
                 { routes.map( ( route ) => {
                     return (
-                        <li><NavLink className={ navLink } to={ route.path }>{ route.element }</NavLink></li>
+                        <li><NavLink className={ navLink } to={ route.path }>{ route.title }</NavLink></li>
                     )
                 } ) }
             </ul>
